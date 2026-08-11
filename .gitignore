@@ -1,0 +1,44 @@
+# 医疗影像及患者数据
+data/
+dicom/
+outputs/
+logs/
+_bench_out/
+
+*.dcm
+*.dicom
+*.ima
+*.zip
+*.7z
+*.rar
+
+# 敏感映射和运行结果
+*.csv
+*.xlsx
+*.xls
+*.log
+*.status
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node.js
+node_modules/
+
+# 编译产物
+bin/
+build/
+dist/
+*.exe
+
+# 历史和本地临时目录
+archive/
+.skill-staging/
+
+# 本地配置和凭据
+.env
+.env.*
