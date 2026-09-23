@@ -1,0 +1,2 @@
+# Python-only test and workbook dependencies; no database is required.
+-r requirements-enrolled-anonymization.txt

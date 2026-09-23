@@ -1,0 +1,94 @@
+# 医疗影像及患者数据
+data/
+dicom/
+outputs/
+logs/
+_bench_out/
+
+*.dcm
+*.dicom
+*.ima
+*.zip
+*.7z
+*.rar
+
+# 敏感映射和运行结果
+*.csv
+*.xlsx
+*.xls
+*.log
+*.status
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node.js
+node_modules/
+
+# 编译产物
+bin/
+build/
+dist/
+*.exe
+
+# 历史和本地临时目录
+archive/
+.skill-staging/
+
+# 本地配置和凭据
+.env
+.env.*
+node_modules
+
+# 数据目录可能包含无扩展名 DICOM、JSON 状态和其他敏感附件
+/artifacts/
+/release/
+/.test_tmp/
+/tmp*/
+/tests/tmp*/
+.dicom_v3_state/
+_fast_state/
+_transfer_audit/
+_selection_audit/
+_identity_review/
+_quarantine/
+_conflicts/
+*.xlsm
+*.sqlite
+*.sqlite3
+*.db
+*.pem
+*.key
+
+# web_registry 混有实际中心数据；只纳入已审查的通用程序
+/web_registry/*
+!/web_registry/dicom_transfer_screening_packages_core.py
+!/web_registry/dicom_transfer_screening_packages_linux.py
+!/web_registry/dicom_transfer_screening_packages_windows.py
+!/web_registry/requirements-screening-packages.txt
+
+# 旧数据库流程含本地连接配置，保留原位，不纳入本次版本
+/src/dicom_organize.py
+/src/dicom_organize_linux.py
+/src/dicom_organizer.py
+/src/dicom_anonymize.py
+
+# 本地中心操作指南含部署位置、病例 UID 或真实运行记录
+# 通用说明采用白名单；新增文档需先审查，再显式加入
+/docs/*
+!/docs/DICOM_V2_README.md
+!/docs/DICOM_V3_README.md
+!/docs/PROJECT_BASELINE.md
+!/docs/GIT_WORKFLOW.md
+
+# 历史部署/备份/删除/人工匹配及案例打包脚本保留在本地
+/scripts/*
+!/scripts/benchmark_enrolled_anonymization_fast.py
+!/scripts/linux/
+/scripts/linux/*
+!/scripts/linux/copy_dicom_from_list.sh
+!/scripts/linux/run_center_image_web.sh
