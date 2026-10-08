@@ -4,6 +4,9 @@
 通用文档。远程发布分支 `codex/safe-baseline-20260923` 使用当前文件树创建独立根提交，
 使旧初始化提交不进入新分支的历史。原有 `main` 分支及其历史保留。
 
+当前 GitHub 默认分支和日常维护基线为 `codex/safe-baseline-20260923`，已合入
+`manage-dicom-data` skill。后续功能分支从该分支创建；旧 `main` 留作历史参考。
+
 ## 提交范围
 
 纳入：`src/` 下维护中的业务入口和内部模块、`tests/test_*.py`、根目录依赖文件、
