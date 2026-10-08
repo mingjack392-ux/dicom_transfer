@@ -1,0 +1,7 @@
+interface:
+  display_name: "DICOM数据管理"
+  short_description: "安全扫描、转存、筛选、分类、审计和匿名化DICOM数据流程"
+  default_prompt: "Use $manage-dicom-data to inspect this DICOM task, choose the maintained workflow, and produce a safe, auditable execution plan or implementation."
+
+policy:
+  allow_implicit_invocation: true

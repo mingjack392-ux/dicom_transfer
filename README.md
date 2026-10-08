@@ -7,12 +7,19 @@
 提交范围和日常版本管理见 [Git 使用说明](docs/GIT_WORKFLOW.md)。
 实际中心数据、映射表、部署指南和旧数据库脚本保留在本地，不纳入 Git。
 
+仓库提供 [DICOM 数据管理 skill](skills/manage-dicom-data/SKILL.md)，用于帮助 Codex
+选择当前入口、检查输入范围和理解审计结果。安装时复制整个 `skills/manage-dicom-data/`
+目录到自己的 Codex skills 目录（默认 `~/.codex/skills/`；配置了 `CODEX_HOME` 时使用
+其下的 `skills/`）。运行时需要本项目的 checkout；skill 内的 `src/`、`tests/` 和
+`docs/` 路径均相对该 checkout，安装位置可以独立于项目。
+
 ## 目录结构
 
 | 目录 | 内容 |
 |---|---|
 | `src/` | DICOM 转存、匿名化、扫描、合并等主程序及运行所需配置 |
 | `tests/` | 自动化测试 |
+| `skills/manage-dicom-data/` | 可安装的 DICOM 工作流 skill 及随附参考资料 |
 | `scripts/linux/` | 通用文件复制和中心影像表启动脚本 |
 | `scripts/benchmark_enrolled_anonymization_fast.py` | 合成数据性能对比 |
 | `web_registry/` | 通用混合包转存程序；同目录的实际中心数据由 Git 排除 |
